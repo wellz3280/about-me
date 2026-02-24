@@ -1,0 +1,6 @@
+.content {
+    width: 900px;
+    min-height: 500px;
+    margin-top: 30px;
+    flex-direction: column;
+}
