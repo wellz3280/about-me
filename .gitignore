@@ -8,9 +8,55 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+package-lock.json
 dist
 dist-ssr
 *.local
+
+# Build output
+build/
+out/
+coverage/
+
+# System files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# OS generated files
+.Spotlight-V100
+.Trashes
+.fseventsd
+.volumeicon.icns
+
+# Env files
+.env
+.env.*
+
+# Misc
+*.tgz
+*.gz
+*.zip
+*.7z
+*.tar
+*.rar
+*.bak
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+
+# VSCode settings (except recommended extensions)
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/*.code-snippets
+
+# Mac system files
+.AppleDouble
+.LSOverride
 
 # Editor directories and files
 .vscode/*
