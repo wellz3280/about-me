@@ -35,7 +35,9 @@ export default function Nav() {
         <a className={styles.navLink} href="#" aria-label='Habilidades' title='Habilidades'><CodeOutlined /> Habilidades</a>
         <a className={styles.navLink} href="https://www.linkedin.com/in/jose-weliton-554617b2" target="_blank" aria-label='linkedin' title='linkedin'><LinkedinOutlined /> LinkedIn</a>
         <a className={styles.navLink} href="https://github.com/wellz3280" target="_blank" aria-label='GitHub' title='GitHub'><GithubOutlined /> GitHub</a>
-        <button className={styles.curriculoBtn}><DownloadOutlined /> Curriculo</button>
+        <button onClick={() => {
+            window.open("https://drive.google.com/file/d/1gtPvmPTM4gnpMdjH_wQwU9MxCKiVMK9l/view?usp=drive_link");
+        }} className={styles.curriculoBtn}><DownloadOutlined /> Curriculo</button>
 
         <a className={styles.navLink} onClick={handleThemeChange} href="#" aria-label='Alterar tema' title='Alterar tema'>
             {nextThemeIcon[theme]}
