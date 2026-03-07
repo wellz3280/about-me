@@ -5,15 +5,18 @@ import Container from './components/Container'
 import Heading from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
   return (
-    <Container>
-      <Heading />
-      <Main />
-      <Footer />
-    </Container>
+    <BrowserRouter>
+      <Container>
+        <Heading />
+        <Main />
+        <Footer />
+      </Container>
+    </BrowserRouter>
   );
 }
 

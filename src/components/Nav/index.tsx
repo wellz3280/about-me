@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CodeOutlined, DownloadOutlined, GithubOutlined, LinkedinOutlined, MailOutlined, MoonOutlined, RobotOutlined, SunOutlined } from "@ant-design/icons";
 import styles from './styles.module.css';
+import { Link } from "react-router-dom";
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -29,7 +30,7 @@ export default function Nav() {
     }, [theme]);
 
     return <nav className={styles.nav}>
-        <a className={styles.navLink} href="#" aria-label='sobre' title='sobre'><RobotOutlined /> Sobre</a>
+        <Link to='/about' className={styles.navLink} aria-label='sobre' title='sobre'><RobotOutlined /> Sobre</Link>
         <a className={styles.navLink} href="#" aria-label='Contato' title='Contato'><MailOutlined /> Contato</a>
         <a className={styles.navLink} href="#" aria-label='Habilidades' title='Habilidades'><CodeOutlined /> Habilidades</a>
         <a className={styles.navLink} href="https://www.linkedin.com/in/jose-weliton-554617b2" target="_blank" aria-label='linkedin' title='linkedin'><LinkedinOutlined /> LinkedIn</a>
