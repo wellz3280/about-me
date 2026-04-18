@@ -1,11 +1,12 @@
 import { Descriptions, type DescriptionsProps } from 'antd';
 import { useViewport } from '../hooks/useViewport';
+import GenericHtml from '../components/GenericHtml';
 
 const items: DescriptionsProps['items'] = [
   {
     label: 'Telefone',
     span: 3,
-    children: '+55 (11) 97634-0280',
+    children: '+55 (11) 99999-9999',
   },
   {
     label: 'Email',
@@ -23,6 +24,7 @@ export default function Contact() {
   const { isNarrow } = useViewport();
 
   return (
+    <GenericHtml>
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <Descriptions
         bordered
@@ -31,5 +33,6 @@ export default function Contact() {
         items={items}
       />
     </div>
+    </GenericHtml>
   );
 }
