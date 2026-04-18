@@ -1,11 +1,14 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: stretch;
+    width: 100%;
+    max-width: var(--layout-max-width);
+    padding-inline: var(--layout-padding-x);
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
     cursor: default;
     position: relative;
     top: -1rem;
-    vertical-align: middle;
-    margin: 0 auto;
 }

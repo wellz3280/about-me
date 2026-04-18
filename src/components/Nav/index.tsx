@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { CodeOutlined, DownloadOutlined, GithubOutlined, LinkedinOutlined, MailOutlined, MoonOutlined, RobotOutlined, SunOutlined } from "@ant-design/icons";
 import styles from './styles.module.css';
 import { Link } from "react-router-dom";
-
-type AvailableThemes = 'dark' | 'light';
+import { useTheme } from "../../contexts/ThemeContext";
 
 export default function Nav() {
-    const [theme, setTheme] = useState<AvailableThemes>(() => {
-        return localStorage.getItem('theme') as AvailableThemes || 'dark';
-    });
+    const { theme, toggleTheme } = useTheme();
 
     const nextThemeIcon = {
         dark: <SunOutlined />,
@@ -19,20 +16,13 @@ export default function Nav() {
         event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
     ) {
         event.preventDefault();
-        setTheme(prevTheme => {
-            return prevTheme === 'dark' ? 'light' : 'dark';
-        });
+        toggleTheme();
     };
 
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-    }, [theme]);
-
     return <nav className={styles.nav}>
-        <Link to='/about' className={styles.navLink} aria-label='sobre' title='sobre'><RobotOutlined /> Sobre</Link>
-        <a className={styles.navLink} href="#" aria-label='Contato' title='Contato'><MailOutlined /> Contato</a>
-        <a className={styles.navLink} href="#" aria-label='Habilidades' title='Habilidades'><CodeOutlined /> Habilidades</a>
+        <Link className={styles.navLink} to='/about' aria-label='sobre' title='sobre'><RobotOutlined /> Sobre</Link>
+        <Link className={styles.navLink} to='/contact' aria-label='Contato' title='Contato'><MailOutlined /> Contato</Link>
+        <Link className={styles.navLink} to='/skills' aria-label='Habilidades' title='Habilidades'><CodeOutlined /> Habilidades</Link>
         <a className={styles.navLink} href="https://www.linkedin.com/in/jose-weliton-554617b2" target="_blank" aria-label='linkedin' title='linkedin'><LinkedinOutlined /> LinkedIn</a>
         <a className={styles.navLink} href="https://github.com/wellz3280" target="_blank" aria-label='GitHub' title='GitHub'><GithubOutlined /> GitHub</a>
         <button onClick={() => {

@@ -1,0 +1,21 @@
+.card {
+    background-color: var(--gray-800);
+    border: 1px solid var(--gray-400);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: var(--gray-400);
+    width: 100%;
+}
+
+.title {
+    padding: 10px;
+    font-size: 1.4rem;
+    color: var(--gray-100);
+}
+
+.content {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: var(--gray-100);
+}
