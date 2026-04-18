@@ -1,4 +1,4 @@
-import { Descriptions, Divider } from 'antd';
+import { Divider } from 'antd';
 import styles from './styles.module.css';
 import type React from 'react';
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { CodeOutlined, DownloadOutlined, GithubOutlined, LinkedinOutlined, MailOutlined, MoonOutlined, RobotOutlined, SunOutlined } from "@ant-design/icons";
 import styles from './styles.module.css';
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 
 export default function Nav() {
