@@ -1,20 +1,20 @@
-.genericHtml h1 {
+.genericHtml h1:not(:global(.ant-typography)) {
     font: var(--gray-400);
     font-size: 3.2rem;
     margin-bottom: 1.6rem;
 }
 
-.genericHtml h2 {
+.genericHtml h2:not(:global(.ant-typography)) {
     font-size: 2.4rem;
     margin-bottom: 1.2rem;
 }
 
-.genericHtml h3 {
+.genericHtml h3:not(:global(.ant-typography)) {
     font-size: 2.4rem;
     margin-bottom: 1.2rem;
 }
 
-.genericHtml p {
+.genericHtml p:not(:global(.ant-typography)) {
     font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 1.6rem;
