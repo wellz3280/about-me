@@ -2,7 +2,7 @@ import React from "react";
 import { CodeOutlined, DownloadOutlined, GithubOutlined, LinkedinOutlined, MailOutlined, MoonOutlined, RobotOutlined, SunOutlined } from "@ant-design/icons";
 import styles from './styles.module.css';
 import { Link } from "react-router-dom";
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../hooks/useTheme";
 
 export default function Nav() {
     const { theme, toggleTheme } = useTheme();

@@ -7,7 +7,8 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import { BrowserRouter } from 'react-router-dom';
 import { ConfigProvider, theme as antdTheme } from 'antd';
-import { ThemeProvider, useTheme } from './contexts/ThemeContext';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { useTheme } from './hooks/useTheme';
 
 function AppContent() {
   const { theme } = useTheme();
